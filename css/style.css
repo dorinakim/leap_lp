@@ -198,6 +198,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   animation: line-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.sp-br { display: none; }
+
 .hero__line em {
   font-style: normal;
   color: var(--green-500);
@@ -479,7 +481,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .step--01 .step__copy {
   grid-column: 3;
   grid-row: 2;
-  margin-top: 38px;
+  margin-top: 58px;
   padding-left: 35px;
 }
 
@@ -508,25 +510,23 @@ ul { list-style: none; margin: 0; padding: 0; }
 .step02__inner {
   position: relative;
   display: grid;
-  grid-template-columns: 600px 477px;
-  column-gap: 19px;
-  align-items: start;
+  grid-template-columns: 600px 420px;
+  column-gap: 40px;
+  align-items: center;
 }
-
-.step--02 .step__copy { margin-top: 180px; }
 
 /* 캐러셀 */
 .carousel {
   position: relative;
-  width: 477px;
+  width: 420px;
 }
 
 /* 그림자가 잘리지 않도록 뷰포트에 여백을 두고(음수 마진으로 위치 보정),
    슬라이드 간격을 여백보다 넓혀 옆 슬라이드는 보이지 않게 */
 .carousel {
-  --slide-w: 345px;
-  --slide-gap: 80px;
-  --slide-pad: 40px;
+  --slide-w: 276px;   /* 시안 345px의 80% */
+  --slide-gap: 64px;
+  --slide-pad: 32px;
 }
 
 .carousel__viewport {
@@ -552,7 +552,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .carousel__arrow {
   position: absolute;
   z-index: 2;
-  top: 324px;
+  top: 254px;
   width: 52px;
   height: 52px;
   display: grid;
@@ -883,14 +883,13 @@ ul { list-style: none; margin: 0; padding: 0; }
   .step01__main, .step01__head, .step01__word { width: 324px; }
   .step01__photo { width: 310px; height: 310px; margin: 3px 0 4px 4.5px; }
   .step01__feed { width: 100vw; height: 463px; }
-  .step--01 .step__copy { margin-top: 34px; padding-left: 31px; }
+  .step--01 .step__copy { margin-top: 54px; padding-left: 31px; }
 
   /* 02 */
   /* 슬라이드 80% (310 → 248px) */
   .step02__inner { grid-template-columns: 1fr 380px; }
   .carousel { width: 380px; --slide-w: 248px; --slide-gap: 58px; --slide-pad: 29px; }
   .carousel__arrow { top: 226px; }
-  .step--02 .step__copy { margin-top: 160px; }
 
   /* 03 */
   .step03__media { width: 40%; }
@@ -912,6 +911,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .header__nav { gap: 16px; font-size: 13px; }
   .header__nav > a { display: none; }
   .hero__line { font-size: 6.4vw; white-space: normal; }
+  .sp-br { display: inline; }
   .hero__copy { transform: none; padding: 0 16px; }
   .to-top { right: 20px; bottom: 20px; width: 44px; height: 44px; }
   .background { --line-count: 12; --line-gap: 7px; height: auto; min-height: 100vh; }
@@ -919,6 +919,9 @@ ul { list-style: none; margin: 0; padding: 0; }
   .background__title { font-size: 22px; margin-bottom: 32px; }
   .background__text { font-size: 16px; line-height: 28px; margin-bottom: 24px; }
   .background__notes { font-size: 12px; line-height: 18px; }
+  /* (1), (2) 뒤 텍스트를 내어쓰기로 정렬 */
+  .background__notes li { padding-left: 2em; text-indent: -2em; }
+  .background__notes li + li { margin-top: 4px; }
   .slogan { --copy-h: 22vw; gap: 32px; }
   .slogan__text { font-size: 15px; line-height: 26px; padding: 0 20px; }
   .slogan__text br { display: none; }
@@ -927,7 +930,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .container { padding: 0 20px; }
   .design__heading { font-size: 22px; }
   .design__text, .step__text { margin-top: 24px; font-size: 16px; line-height: 28px; }
-  .step__num { font-size: 56px; margin-left: -4px; }
+  .step__num { font-size: 52px; margin: 0 0 6px -4px; }
   .step__title { font-size: 24px; }
   .step__title br { display: none; }
 

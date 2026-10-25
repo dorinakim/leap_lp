@@ -25,22 +25,22 @@ const I18N = {
     "nav.future": "후속연구",
     "bg.title": "연구의 배경 및 목적",
     "bg.p1":
-      "언어는 사회문화적 맥락을 내포하는 매체로서, <strong>'시각적 이미지'</strong>를 매개로 할 때 더욱 직관적으로 소통될 수 있다. <strong>비언어적 요소</strong>인 이미지, 표정, 몸짓 등 <strong>시각적 자극</strong>은 텍스트나 음성보다 문화적 뉘앙스를 효과적으로 전달하며(1), 이미지 기반 인터랙션이 결합된 UX 공간은 사용자에게 감각적 체험(본능적 층위)부터 의미 있는 사회적 관계 형성(반성적 층위)까지 다층적 감성 경험을 창출할 수 있다(2).",
+      "언어는 사회문화적 맥락을 내포하는 매체로서, <strong>“시각적 이미지”</strong>를 매개로 할 때 더욱 직관적으로 소통될 수 있다. <strong>비언어적 요소</strong>인 이미지, 표정, 몸짓 등 <strong>시각적 자극</strong>은 텍스트나 음성보다 문화적 뉘앙스를 효과적으로 전달하며(1), 이미지 기반 인터랙션이 결합된 UX 공간은 사용자에게 감각적 체험(본능적 층위)부터 의미 있는 사회적 관계 형성(반성적 층위)까지 다층적 감성 경험을 창출할 수 있다(2).",
     "bg.p2":
       "본 연구는 <strong>이미지 매개 상호작용이라는 새로운 소셜 인터랙션 기제가 학습자의 감성 경험에 미치는 영향</strong>에 주목한다.",
     "bg.note1": "(1) 박동진·박성은(2024) 비언어적 요소의 언어 소통에 대한 영향력 연구. KCI ART003163539",
     "bg.note2": "(2) 이승연(2012) 사용자 경험을 위한 인터랙션 공간디자인 표현에 관한 연구. KCI ART001690380",
     "slogan.text":
-      "LEAP은 '공부가 아니라 놀이처럼 배우기'라는 철학을 가진<br /><strong>이미지 기반 단어 사전을 공유하는 소셜 플랫폼</strong>입니다.",
+      "LEAP은 “공부가 아니라 놀이처럼 배우기”라는 철학을 가진<br /><strong>이미지 기반 단어 사전을 공유하는 소셜 플랫폼</strong>입니다.",
     "design.title": "디자인",
     "design.text":
       "본 연구에서 제안하는 소셜 네트워크 기반 언어 학습 서비스는 <strong>AI 기반의 객체·맥락 데이터 분석 기술과 소셜 미디어의 유기적인 인터랙션을 결합</strong>하여, 학습자의 자발적 참여와 지속 사용 의도를 향상시키는 것을 목적으로 설계되었다. 본 서비스의 전반적인 사용자 여정 및 인터페이스 흐름은 다음과 같이 네 가지 핵심 단계로 구성된다.",
     "step1.title": "진입 및 메인 홈 화면 탐색 단계",
     "step1.text":
-      "사용자가 앱에 진입하면 최초 학습하고자 하는 목표 언어를 선택하게 된다. 이후 <strong>\"공부가 아니라 놀이같은 학습\"</strong>이라는 서비스 철학에 따라, 정형화된 학습 리스트 대신 타 사용자들이 공유한 일상적인 이미지 파일들로 구성된 인스타그램 스타일의 아카이빙 피드가 홈 화면으로 제시된다. 사용자는 스크롤을 통해 피드를 자유롭게 탐색하고 개별 포스팅을 확인할 수 있다.",
-    "step2.title": "AI 기반 이미지 매핑 및<br />단어장 생성 단계",
+      "사용자가 앱에 진입하면 최초 학습하고자 하는 목표 언어를 선택하게 된다. 이후 <strong>“공부가 아니라 놀이같은 학습”</strong>이라는 서비스 철학에 따라, 정형화된 학습 리스트 대신 타 사용자들이 공유한 일상적인 이미지 파일들로 구성된 인스타그램 스타일의 아카이빙 피드가 홈 화면으로 제시된다. 사용자는 스크롤을 통해 피드를 자유롭게 탐색하고 개별 포스팅을 확인할 수 있다.",
+    "step2.title": "AI 기반 이미지 매핑 및 <br />단어장 생성 단계",
     "step2.text":
-      "사용자가 하단의 '+' 버튼을 눌러 직접 사진을 촬영하거나 기존 이미지를 로드하면, 생성형 AI 기술이 <strong>이미지 내 객체와 맥락을 실시간으로 분석하여 관련 외국어 키워드들을 추출·제시</strong>한다. 사용자가 제시된 키워드 중 학습을 원하는 단어를 선택하면, 해당 단어의 사전적 정의, 예문, 그리고 문화적 유래가 유기적으로 정리되며 사용자 개인의 맞춤형 단어장에 자동으로 아카이빙되는 구조를 지닌다.",
+      "사용자가 하단의 “+” 버튼을 눌러 직접 사진을 촬영하거나 기존 이미지를 로드하면, 생성형 AI 기술이 <strong>이미지 내 객체와 맥락을 실시간으로 분석하여 관련 외국어 키워드들을 추출·제시</strong>한다. 사용자가 제시된 키워드 중 학습을 원하는 단어를 선택하면, 해당 단어의 사전적 정의, 예문, 그리고 문화적 유래가 유기적으로 정리되며 사용자 개인의 맞춤형 단어장에 자동으로 아카이빙되는 구조를 지닌다.",
     "step3.title": "소셜 상호작용 및 검색 단계",
     "step3.text":
       "사용자는 개별 피드에 댓글을 작성하여 단어의 실제 쓰임새나 국가별 문화적 차이에 대해 <strong>글로벌 유저들과 쌍방향으로 소통</strong>할 수 있다. 또한, 검색 기능을 통해 특정 키워드로 포스팅된 다채로운 일상 이미지 피드들을 한눈에 확인하며 <strong>다양한 언어적 맥락을 파악</strong>할 수 있다.",
@@ -64,16 +64,16 @@ const I18N = {
     "bg.note2":
       "(2) Lee, S. Y. (2012) A Study on the Expression of Interaction Space Design for User Experience: Focusing on Digital Media. KCI ART001690380",
     "slogan.text":
-      "Built on the philosophy of 'learning like play, not study,'<br />LEAP is <strong>a social platform for sharing image-based word dictionaries</strong>.",
+      "Built on the philosophy of “learning like play, not study,”<br />LEAP is <strong>a social platform for sharing image-based word dictionaries</strong>.",
     "design.title": "Design",
     "design.text":
       "The social-network-based language learning service proposed in this study <strong>combines AI-based object and context analysis with the organic interactions of social media</strong>, aiming to increase learners' voluntary participation and intention to keep using the service. The overall user journey and interface flow consist of the following four core stages.",
     "step1.title": "Onboarding & Home Feed Exploration",
     "step1.text":
-      "On entering the app, users first choose the target language they want to learn. Following the service philosophy of <strong>\"learning like play, not study,\"</strong> the home screen presents an Instagram-style archive feed of everyday images shared by other users instead of a fixed study list. Users can scroll freely through the feed and open individual posts.",
-    "step2.title": "AI Image Mapping &<br />Wordbook Creation",
+      "On entering the app, users first choose the target language they want to learn. Following the service philosophy of <strong>“learning like play, not study,”</strong> the home screen presents an Instagram-style archive feed of everyday images shared by other users instead of a fixed study list. Users can scroll freely through the feed and open individual posts.",
+    "step2.title": "AI Image Mapping & <br />Wordbook Creation",
     "step2.text":
-      "When users tap the '+' button to take a photo or load an existing image, generative AI <strong>analyzes the objects and context in the image in real time and suggests related foreign-language keywords</strong>. Once a user picks a word to learn, its dictionary definition, example sentences and cultural origin are organized and automatically archived in the user's personal wordbook.",
+      "When users tap the “+” button to take a photo or load an existing image, generative AI <strong>analyzes the objects and context in the image in real time and suggests related foreign-language keywords</strong>. Once a user picks a word to learn, its dictionary definition, example sentences and cultural origin are organized and automatically archived in the user's personal wordbook.",
     "step3.title": "Social Interaction & Search",
     "step3.text":
       "By commenting on individual posts, users can <strong>talk with global users in both directions</strong> about how a word is actually used and how cultures differ. Through search, they can also browse diverse everyday image posts tagged with a keyword at a glance and <strong>grasp a variety of linguistic contexts</strong>.",
