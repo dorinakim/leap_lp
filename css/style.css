@@ -198,6 +198,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   animation: line-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* 모바일 전용 줄바꿈 (PC·태블릿에선 아무것도 아님) */
 .sp-br { display: none; }
 
 .hero__line em {
@@ -911,7 +912,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .header__nav { gap: 16px; font-size: 13px; }
   .header__nav > a { display: none; }
   .hero__line { font-size: 6.4vw; white-space: normal; }
-  .sp-br { display: inline; }
+  .sp-br { display: block; }
   .hero__copy { transform: none; padding: 0 16px; }
   .to-top { right: 20px; bottom: 20px; width: 44px; height: 44px; }
   .background { --line-count: 12; --line-gap: 7px; height: auto; min-height: 100vh; }
