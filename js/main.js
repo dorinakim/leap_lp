@@ -28,6 +28,8 @@ const I18N = {
       "언어는 사회문화적 맥락을 내포하는 매체로서, <strong>'시각적 이미지'</strong>를 매개로 할 때 더욱 직관적으로 소통될 수 있다. <strong>비언어적 요소</strong>인 이미지, 표정, 몸짓 등 <strong>시각적 자극</strong>은 텍스트나 음성보다 문화적 뉘앙스를 효과적으로 전달하며(1), 이미지 기반 인터랙션이 결합된 UX 공간은 사용자에게 감각적 체험(본능적 층위)부터 의미 있는 사회적 관계 형성(반성적 층위)까지 다층적 감성 경험을 창출할 수 있다(2).",
     "bg.p2":
       "본 연구는 <strong>이미지 매개 상호작용이라는 새로운 소셜 인터랙션 기제가 학습자의 감성 경험에 미치는 영향</strong>에 주목한다.",
+    "bg.note1": "(1) 박동진·박성은(2024) 비언어적 요소의 언어 소통에 대한 영향력 연구. KCI ART003163539",
+    "bg.note2": "(2) 이승연(2012) 사용자 경험을 위한 인터랙션 공간디자인 표현에 관한 연구. KCI ART001690380",
     "slogan.text":
       "LEAP은 '공부가 아니라 놀이처럼 배우기'라는 철학을 가진<br /><strong>이미지 기반 단어 사전을 공유하는 소셜 플랫폼</strong>입니다.",
     "design.title": "디자인",
@@ -57,6 +59,10 @@ const I18N = {
       "As a medium that carries sociocultural context, language can be communicated more intuitively when mediated by <strong>visual images</strong>. <strong>Non-verbal elements</strong> such as images, facial expressions and gestures — that is, <strong>visual stimuli</strong> — convey cultural nuance more effectively than text or speech (1), and a UX space combined with image-based interaction can create multi-layered emotional experiences, from sensory experience (the visceral level) to the formation of meaningful social relationships (the reflective level) (2).",
     "bg.p2":
       "This study focuses on <strong>how image-mediated interaction, a new mechanism of social interaction, affects learners' emotional experience</strong>.",
+    "bg.note1":
+      "(1) Park, D. J., & Park, S. E. (2024) A Study on the Influence of Nonverbal Elements on Linguistic Communication: Focusing on Visual and Vocal Elements. KCI ART003163539",
+    "bg.note2":
+      "(2) Lee, S. Y. (2012) A Study on the Expression of Interaction Space Design for User Experience: Focusing on Digital Media. KCI ART001690380",
     "slogan.text":
       "Built on the philosophy of 'learning like play, not study,'<br />LEAP is <strong>a social platform for sharing image-based word dictionaries</strong>.",
     "design.title": "Design",
@@ -178,6 +184,49 @@ document.addEventListener("keydown", (e) => {
     line.style.setProperty("--i", i);
     wrap.appendChild(line);
   }
+})();
+
+// ---------- 흐르는 배경 (섹션 3 카피, 섹션 4 피드) ----------
+// 화면 폭만 한 요소의 background-position을 옮겨 끊김 없이 반복.
+// data-dir: -1 오른쪽→왼쪽, 1 왼쪽→오른쪽 / data-ratio: 타일 가로÷세로
+// data-duration: 타일 1장만큼 이동하는 시간(s) / data-start: 시작 위치(vw)
+(function marquees() {
+  const items = [...document.querySelectorAll("[data-marquee]")].map((el) => ({
+    el,
+    dir: Number(el.dataset.dir),
+    ratio: Number(el.dataset.ratio),
+    duration: Number(el.dataset.duration),
+    offset: (window.innerWidth * Number(el.dataset.start)) / 100,
+    visible: true,
+  }));
+  const render = (it) => {
+    it.el.style.backgroundPositionX = `${it.offset}px`;
+  };
+  items.forEach(render);
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  // 화면 밖이면 멈춤
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      items.find((it) => it.el === entry.target).visible = entry.isIntersecting;
+    });
+  });
+  items.forEach((it) => io.observe(it.el));
+
+  let last = performance.now();
+  function frame(now) {
+    const dt = Math.min((now - last) / 1000, 0.1);
+    last = now;
+    items.forEach((it) => {
+      const tile = it.el.clientHeight * it.ratio;
+      if (!it.visible || !tile) return;
+      it.offset = (it.offset + (it.dir * tile * dt) / it.duration) % tile;
+      render(it);
+    });
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
 })();
 
 // ---------- Section 4: 02 화면 캐러셀 ----------

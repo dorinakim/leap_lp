@@ -324,8 +324,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 .slogan {
   /* 카피 이미지 높이(시안 1920 기준 232px) — 화면 폭에 비례 */
   --copy-h: 12.1vw;
-  --copy-gap: 6vw;
-  --marquee-duration: 36s;
 
   position: relative;
   min-height: 100vh;
@@ -338,45 +336,15 @@ ul { list-style: none; margin: 0; padding: 0; }
   background: #e9f3f1;
 }
 
-.marquee { overflow: hidden; }
-
-.marquee__track {
-  display: flex;
-  width: max-content;
-  will-change: transform;
-}
-
-.marquee__track img {
-  display: block;
+/* 화면 폭만 한 요소의 배경을 옮겨 흐르게 함 (iOS Safari에서 아주 넓은 요소를
+   transform으로 움직이면 그려지지 않는 문제 회피). 이동은 js/main.js의 marquee */
+.marquee {
   height: var(--copy-h);
-  width: auto;
-  margin-right: var(--copy-gap);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
 }
-
-/* 같은 카피 3장을 이어 붙이고 1장 길이만큼 이동 → 끊김 없이 반복 */
-.marquee--left .marquee__track {
-  animation: marquee-left var(--marquee-duration) linear infinite;
-  /* 시작 시 'LEARNING'이 왼쪽에서 살짝 들어온 상태 */
-  animation-delay: calc(var(--marquee-duration) * -0.976);
-}
-
-.marquee--right .marquee__track {
-  animation: marquee-right var(--marquee-duration) linear infinite;
-  /* 시작 시 'NOT STUDY.'가 화면에 보이는 상태 */
-  animation-delay: calc(var(--marquee-duration) * -0.434);
-}
-
-/* 오른쪽 → 왼쪽 */
-@keyframes marquee-left {
-  from { transform: translateX(-33.3333%); }
-  to   { transform: translateX(-66.6667%); }
-}
-
-/* 왼쪽 → 오른쪽 */
-@keyframes marquee-right {
-  from { transform: translateX(-66.6667%); }
-  to   { transform: translateX(-33.3333%); }
-}
+.marquee--left { background-image: url("../assets/images/copy_01.svg"); }
+.marquee--right { background-image: url("../assets/images/copy_02.svg"); }
 
 .slogan__text {
   margin: 0;
@@ -390,9 +358,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .slogan__text strong { font-weight: 700; }
 
-@media (prefers-reduced-motion: reduce) {
-  .marquee__track { animation-play-state: paused !important; }
-}
 
 /* ---------- Section 4 : 디자인 ---------- */
 /* 수치는 시안(1920px) 기준 */
@@ -502,29 +467,9 @@ ul { list-style: none; margin: 0; padding: 0; }
   height: 514px;
   overflow: hidden;
   opacity: 0.5;
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 280px);
-  mask-image: linear-gradient(to right, transparent 0, #000 280px);
-}
-
-.step01__feed-track {
-  display: flex;
-  width: max-content;
-  animation: feed-scroll 140s linear infinite;
-}
-
-.step01__feed-track img {
-  display: block;
-  height: 514px;
-  width: auto;
-  margin-right: 31px;
-}
-
-@keyframes feed-scroll {
-  to { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .step01__feed-track { animation: none; }
+  background: url("../assets/images/feed_tile.jpg") repeat-x 0 0 / auto 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0, 0, 0, 0.35) 140px, #000 360px);
+  mask-image: linear-gradient(to right, transparent 0, rgba(0, 0, 0, 0.35) 140px, #000 360px);
 }
 
 .step--01 .step__copy {
@@ -922,7 +867,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ---------- 태블릿: 디자인 섹션 이미지·텍스트 90% ---------- */
 @media (min-width: 769px) and (max-width: 1199px) {
   .design__heading { font-size: 28px; }
-  .design__text, .step__text { font-size: 20.7px; line-height: 38.7px; }
+  /* 본문: 2번째 섹션 본문과 같은 크기(19px ≈ 14~15pt) */
+  .background__text,
+  .design__text, .step__text { font-size: 19px; line-height: 34px; }
+  .step__text { margin-top: 40px; }
   .step__title { font-size: 36px; }
   .step__num { font-size: 70px; margin: 0 0 -25px -30px; }
 
@@ -931,7 +879,6 @@ ul { list-style: none; margin: 0; padding: 0; }
   .step01__main, .step01__head, .step01__word { width: 324px; }
   .step01__photo { width: 310px; height: 310px; margin: 3px 0 4px 4.5px; }
   .step01__feed { width: 100vw; height: 463px; }
-  .step01__feed-track img { height: 463px; margin-right: 28px; }
   .step--01 .step__copy { margin-top: 34px; padding-left: 31px; }
 
   /* 02 */
@@ -950,7 +897,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 @media (min-width: 769px) and (max-width: 1140px) {
-  .design__text, .step__text { font-size: 17.1px; line-height: 30.6px; }
   .step__title { font-size: 28.8px; }
 }
 
@@ -968,7 +914,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .background__title { font-size: 22px; margin-bottom: 32px; }
   .background__text { font-size: 16px; line-height: 28px; margin-bottom: 24px; }
   .background__notes { font-size: 12px; line-height: 18px; }
-  .slogan { --copy-h: 22vw; --marquee-duration: 24s; gap: 32px; }
+  .slogan { --copy-h: 22vw; gap: 32px; }
   .slogan__text { font-size: 15px; line-height: 26px; padding: 0 20px; }
   .slogan__text br { display: none; }
 
