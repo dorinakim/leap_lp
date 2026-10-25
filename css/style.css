@@ -343,7 +343,11 @@ ul { list-style: none; margin: 0; padding: 0; }
   background-repeat: repeat-x;
   background-size: auto 100%;
 }
-.marquee--left { background-image: url("../assets/images/copy_01.svg"); }
+.marquee--left {
+  background-image: url("../assets/images/copy_01.svg");
+  /* SVG 아래쪽 쉼표 여백(270 중 52)만큼 당겨서, 글자 기준으로 위/아래 간격을 같게 */
+  margin-bottom: calc(var(--copy-h) * -0.1926);
+}
 .marquee--right { background-image: url("../assets/images/copy_02.svg"); }
 
 .slogan__text {
