@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LEAP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Open+Sans:wght@600;700;800&family=Oswald:wght@400&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#top" class="header__logo" aria-label="LEAP">LEAP</a>
+      <nav class="header__nav">
+        <a href="#background" data-i18n="nav.background">연구의 배경 및 목적</a>
+        <a href="#design" data-i18n="nav.design">디자인</a>
+        <a href="#future" data-i18n="nav.future">후속연구</a>
+        <div class="lang" data-lang-dropdown>
+          <button type="button" class="lang__toggle" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang__current">KOR</span>
+            <svg class="lang__chevron" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+              <path d="M2 4.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <ul class="lang__menu" role="listbox">
+            <li><button type="button" class="lang__option is-active" data-lang="ko">KOR</button></li>
+            <li><button type="button" class="lang__option" data-lang="en">ENG</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Hero -->
+    <section class="hero" id="top">
+      <svg class="hero__arc" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <circle cx="1648" cy="220" r="450" />
+      </svg>
+      <div class="hero__copy">
+        <h1 class="hero__line">“<em>Speak</em> Your World, <em>Discover</em> Others.”</h1>
+        <p class="hero__line" aria-hidden="true">“<em>Speak</em> Your World, <em>Discover</em> Others.”</p>
+        <p class="hero__line" aria-hidden="true">“<em>Speak</em> Your World, <em>Discover</em> Others.”</p>
+        <p class="hero__line" aria-hidden="true">“<em>Speak</em> Your World, <em>Discover</em> Others.”</p>
+      </div>
+    </section>
+
+    <!-- Section 2: 연구의 배경 및 목적 -->
+    <section class="background" id="background" data-reveal>
+      <div class="background__lines" aria-hidden="true"></div>
+      <div class="background__inner">
+        <h2 class="background__title reveal-item" style="--order: 0" data-i18n="bg.title">연구의 배경 및 목적</h2>
+        <p class="background__text reveal-item" style="--order: 1" data-i18n-html="bg.p1">
+          언어는 사회문화적 맥락을 내포하는 매체로서, <strong>'시각적 이미지'</strong>를 매개로 할 때 더욱 직관적으로 소통될 수 있다. <strong>비언어적 요소</strong>인 이미지, 표정, 몸짓 등 <strong>시각적 자극</strong>은 텍스트나 음성보다 문화적 뉘앙스를 효과적으로 전달하며(1), 이미지 기반 인터랙션이 결합된 UX 공간은 사용자에게 감각적 체험(본능적 층위)부터 의미 있는 사회적 관계 형성(반성적 층위)까지 다층적 감성 경험을 창출할 수 있다(2).
+        </p>
+        <p class="background__text reveal-item" style="--order: 1" data-i18n-html="bg.p2">
+          본 연구는 <strong>이미지 매개 상호작용이라는 새로운 소셜 인터랙션 기제가 학습자의 감성 경험에 미치는 영향</strong>에 주목한다.
+        </p>
+        <ol class="background__notes reveal-item" style="--order: 2">
+          <li>(1) 박동진·박성은(2024) 비언어적 요소의 언어 소통에 대한 영향력 연구. KCI ART003163539</li>
+          <li>(2) 이승연(2012) 사용자 경험을 위한 인터랙션 공간디자인 표현에 관한 연구. KCI ART001690380</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Section 3: LEARNING LIKE PLAY, NOT STUDY. -->
+    <section class="slogan" aria-label="Learning like play, not study.">
+      <div class="marquee marquee--left" aria-hidden="true">
+        <div class="marquee__track">
+          <img src="assets/images/copy_01.svg" alt="" />
+          <img src="assets/images/copy_01.svg" alt="" />
+          <img src="assets/images/copy_01.svg" alt="" />
+        </div>
+      </div>
+
+      <p class="slogan__text" data-i18n-html="slogan.text">
+        LEAP은 '공부가 아니라 놀이처럼 배우기'라는 철학을 가진<br />
+        <strong>이미지 기반 단어 사전을 공유하는 소셜 플랫폼</strong>입니다.
+      </p>
+
+      <div class="marquee marquee--right" aria-hidden="true">
+        <div class="marquee__track">
+          <img src="assets/images/copy_02.svg" alt="" />
+          <img src="assets/images/copy_02.svg" alt="" />
+          <img src="assets/images/copy_02.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: 디자인 -->
+    <section class="design" id="design">
+      <!-- 인트로 -->
+      <div class="design__intro container" data-reveal>
+        <h2 class="design__heading reveal-item" style="--order: 0" data-i18n="design.title">디자인</h2>
+        <p class="design__text reveal-item" style="--order: 1" data-i18n-html="design.text">
+          본 연구에서 제안하는 소셜 네트워크 기반 언어 학습 서비스는 <strong>AI 기반의 객체·맥락 데이터 분석 기술과 소셜 미디어의 유기적인 인터랙션을 결합</strong>하여, 학습자의 자발적 참여와 지속 사용 의도를 향상시키는 것을 목적으로 설계되었다. 본 서비스의 전반적인 사용자 여정 및 인터페이스 흐름은 다음과 같이 네 가지 핵심 단계로 구성된다.
+        </p>
+      </div>
+
+      <!-- 01 진입 및 메인 홈 화면 탐색 단계 -->
+      <div class="step step--01 container">
+        <figure class="step01__main">
+          <img class="step01__head" src="assets/images/apple_card_head.png" alt="" />
+          <img class="step01__photo" src="assets/images/apple.png" alt="LEAP 홈 피드의 apple 포스팅" />
+          <img class="step01__word" src="assets/images/apple_card_word.png" alt="apple 단어 상세 화면" />
+        </figure>
+        <!-- 오른쪽 → 왼쪽으로 천천히 흐르는 피드 -->
+        <div class="step01__feed" aria-hidden="true">
+          <div class="step01__feed-track">
+            <img src="assets/images/img_exploration_slide.png" alt="" />
+            <img src="assets/images/img_exploration_slide.png" alt="" />
+          </div>
+        </div>
+        <div class="step__copy" data-reveal>
+          <div class="reveal-item" style="--order: 0">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title" data-i18n="step1.title">진입 및 메인 홈 화면 탐색 단계</h3>
+          </div>
+          <p class="step__text reveal-item" style="--order: 1" data-i18n-html="step1.text">
+            사용자가 앱에 진입하면 최초 학습하고자 하는 목표 언어를 선택하게 된다. 이후 <strong>"공부가 아니라 놀이같은 학습"</strong>이라는 서비스 철학에 따라, 정형화된 학습 리스트 대신 타 사용자들이 공유한 일상적인 이미지 파일들로 구성된 인스타그램 스타일의 아카이빙 피드가 홈 화면으로 제시된다. 사용자는 스크롤을 통해 피드를 자유롭게 탐색하고 개별 포스팅을 확인할 수 있다.
+          </p>
+        </div>
+      </div>
+
+      <!-- 02 AI 기반 이미지 매핑 및 단어장 생성 단계 -->
+      <div class="step step--02">
+        <div class="step02__inner container">
+          <div class="step__copy" data-reveal>
+            <div class="reveal-item" style="--order: 0">
+              <span class="step__num" aria-hidden="true">02</span>
+              <h3 class="step__title" data-i18n-html="step2.title">AI 기반 이미지 매핑 및<br />단어장 생성 단계</h3>
+            </div>
+            <p class="step__text reveal-item" style="--order: 1" data-i18n-html="step2.text">
+              사용자가 하단의 '+' 버튼을 눌러 직접 사진을 촬영하거나 기존 이미지를 로드하면, 생성형 AI 기술이 <strong>이미지 내 객체와 맥락을 실시간으로 분석하여 관련 외국어 키워드들을 추출·제시</strong>한다. 사용자가 제시된 키워드 중 학습을 원하는 단어를 선택하면, 해당 단어의 사전적 정의, 예문, 그리고 문화적 유래가 유기적으로 정리되며 사용자 개인의 맞춤형 단어장에 자동으로 아카이빙되는 구조를 지닌다.
+            </p>
+          </div>
+
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="이전 화면">
+              <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M21 13H5M12 6l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+            <div class="carousel__viewport">
+              <div class="carousel__track">
+                <img class="carousel__slide" src="assets/images/slide_01.png" alt="단어장 화면" />
+                <img class="carousel__slide" src="assets/images/slide_02.png" alt="사진 촬영 화면" />
+                <img class="carousel__slide" src="assets/images/slide_03.png" alt="이미지 키워드 분석 중 화면" />
+                <img class="carousel__slide" src="assets/images/slide_04.png" alt="추천 키워드 선택 화면" />
+                <img class="carousel__slide" src="assets/images/slide_05.png" alt="Golden Retriever 단어 상세 화면" />
+              </div>
+            </div>
+            <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="다음 화면">
+              <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 13h16M14 6l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+            <div class="carousel__dots" role="tablist"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 + 04 (민트 배경 구간) -->
+      <div class="design__mint-zone">
+        <div class="design__mint" aria-hidden="true">
+          <div class="noti noti--blur" style="--x: -1040px; --y: 190px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">알림</span><span class="noti__time">지금</span><p class="noti__msg">다른 사람의 피드에 댓글을 달아주세요</p></div></div>
+          <div class="noti noti--blur" style="--x: -320px; --y: 190px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">알림</span><span class="noti__time">지금</span><p class="noti__msg">오늘 하루의 단어를 채워보세요!</p></div></div>
+          <div class="noti noti--blur" style="--x: 415px; --y: 190px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">긴급</span><span class="noti__time">3분 전</span><p class="noti__msg">지금 Luna님의 주변은 어떤 모습인가요?</p></div></div>
+          <div class="noti noti--blur" style="--x: -1305px; --y: 376px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">긴급</span><span class="noti__time">3분 전</span><p class="noti__msg">지금 dorina님의 주변은 어떤 모습인가요?</p></div></div>
+          <div class="noti noti--blur" style="--x: -1400px; --y: 596px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">알림</span><span class="noti__time">지금</span><p class="noti__msg">다른 사람의 피드에 댓글을 달아주세요</p></div></div>
+          <div class="noti noti--blur" style="--x: -1260px; --y: 860px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">알림</span><span class="noti__time">지금</span><p class="noti__msg">오늘 하루의 단어를 채워보세요!</p></div></div>
+          <div class="noti noti--blur" style="--x: -380px; --y: 891px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">긴급</span><span class="noti__time">3분 전</span><p class="noti__msg">지금 Luna님의 주변은 어떤 모습인가요?</p></div></div>
+        </div>
+
+        <!-- 03 소셜 상호작용 및 검색 단계 -->
+        <div class="step step--03">
+          <div class="step03__media">
+            <img class="step03__photo" src="assets/images/socialing.png" alt="댓글 화면을 사용 중인 손과 스마트폰" />
+          </div>
+          <div class="step__copy" data-reveal>
+            <div class="reveal-item" style="--order: 0">
+              <span class="step__num" aria-hidden="true">03</span>
+              <h3 class="step__title" data-i18n="step3.title">소셜 상호작용 및 검색 단계</h3>
+            </div>
+            <p class="step__text reveal-item" style="--order: 1" data-i18n-html="step3.text">
+              사용자는 개별 피드에 댓글을 작성하여 단어의 실제 쓰임새나 국가별 문화적 차이에 대해 <strong>글로벌 유저들과 쌍방향으로 소통</strong>할 수 있다. 또한, 검색 기능을 통해 특정 키워드로 포스팅된 다채로운 일상 이미지 피드들을 한눈에 확인하며 <strong>다양한 언어적 맥락을 파악</strong>할 수 있다.
+            </p>
+          </div>
+        </div>
+
+        <!-- 04 행동 유도 푸시 알림 단계 -->
+        <div class="step step--04">
+          <div class="container">
+            <div class="step__copy" data-reveal>
+              <div class="reveal-item" style="--order: 0">
+                <span class="step__num" aria-hidden="true">04</span>
+                <h3 class="step__title" data-i18n="step4.title">행동 유도 푸시 알림 단계</h3>
+              </div>
+              <p class="step__text step__text--dark reveal-item" style="--order: 1" data-i18n-html="step4.text">
+                시스템은 서비스 사용 중간에 두 가지 유형의 <strong>자발적 행동 유도 알림</strong>을 송신한다. 첫 번째는 “지금 주변은 어떤 모습인가요?”, “오늘 하루의 단어를 채워보세요!”와 같이 사용자의 일상 아카이빙 및 콘텐츠 생산을 독려하는 알림이며, 두 번째는 “다른 사람의 피드에 댓글을 달아주세요”와 같이 타 유저와의 소셜 인터랙션을 밀착 유도하는 알림이다.
+              </p>
+            </div>
+          </div>
+
+          <div class="step04__notis" aria-hidden="true">
+            <div class="noti" style="--x: 260px; --y: -67px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">알림</span><span class="noti__time">지금</span><p class="noti__msg">오늘 하루의 단어를 채워보세요!</p></div></div>
+            <div class="noti noti--urgent" style="--x: 195px; --y: 118px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">긴급</span><span class="noti__time">3분 전</span><p class="noti__msg">지금 dorina님의 주변은 어떤 모<br />습인가요?</p></div></div>
+            <div class="noti" style="--x: 360px; --y: 338px"><span class="noti__icon"></span><div class="noti__body"><span class="noti__label">알림</span><span class="noti__time">지금</span><p class="noti__msg">다른 사람의 피드에 댓글을 달아주<br />세요</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: 후속연구 (구글 폼) -->
+    <section class="future" id="future">
+      <div class="future__rings" aria-hidden="true"></div>
+      <div class="future__inner" data-reveal>
+        <h2 class="future__title reveal-item" style="--order: 0" data-i18n-html="future.title"><span>연구</span>는 계속됩니다!</h2>
+        <p class="future__text reveal-item" style="--order: 1" data-i18n-html="future.text">저의 후속연구에 <strong>함께해 주세요</strong>:)</p>
+
+        <!-- PC: 구글 폼 QR 코드 (assets/images/qr.png 로 교체) -->
+        <div class="future__qr reveal-item" style="--order: 2">
+          <!-- <img src="assets/images/qr.png" alt="후속연구 참여 구글 폼 QR 코드" /> -->
+        </div>
+
+        <!-- MO: 구글 폼 링크 버튼 -->
+        <div class="future__btn-wrap reveal-item" style="--order: 2">
+          <a class="future__btn" href="#" target="_blank" rel="noopener" data-form-link>Join Me!</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to top -->
+  <button type="button" class="to-top" aria-label="맨 위로">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+      <path d="M13 22V4M5 12l8-8 8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
