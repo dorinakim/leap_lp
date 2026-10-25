@@ -274,8 +274,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .background__text {
   margin: 0 0 43px;
-  font-size: 23px;
-  line-height: 43px;
+  font-size: 18px;
+  line-height: 34px;
   font-weight: 400;
   color: var(--green-500);
   word-break: keep-all;
@@ -386,8 +386,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 .design__text,
 .step__text {
   margin: 70px 0 0;
-  font-size: 23px;
-  line-height: 43px;
+  font-size: 18px;
+  line-height: 34px;
   letter-spacing: -0.03em;
   color: var(--green-500);
   word-break: keep-all;
@@ -860,7 +860,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 @media (min-width: 769px) and (max-height: 900px) {
   .background__title { font-size: 26px; margin-bottom: 36px; }
-  .background__text { font-size: 19px; line-height: 34px; margin-bottom: 26px; }
+  .background__text { margin-bottom: 26px; }
   .background__notes { margin-top: 8px; font-size: 13px; line-height: 19px; }
 }
 
