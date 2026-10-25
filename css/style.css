@@ -867,9 +867,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ---------- 태블릿: 디자인 섹션 이미지·텍스트 90% ---------- */
 @media (min-width: 769px) and (max-width: 1199px) {
   .design__heading { font-size: 28px; }
-  /* 본문: 2번째 섹션 본문과 같은 크기(19px ≈ 14~15pt) */
+  /* 본문: 2번째 섹션과 디자인 섹션 동일하게 15px */
   .background__text,
-  .design__text, .step__text { font-size: 19px; line-height: 34px; }
+  .design__text, .step__text { font-size: 15px; line-height: 27px; }
   .step__text { margin-top: 40px; }
   .step__title { font-size: 36px; }
   .step__num { font-size: 70px; margin: 0 0 -25px -30px; }
@@ -882,9 +882,10 @@ ul { list-style: none; margin: 0; padding: 0; }
   .step--01 .step__copy { margin-top: 34px; padding-left: 31px; }
 
   /* 02 */
-  .step02__inner { grid-template-columns: 1fr 430px; }
-  .carousel { width: 430px; --slide-w: 310px; --slide-gap: 72px; --slide-pad: 36px; }
-  .carousel__arrow { top: 292px; }
+  /* 슬라이드 80% (310 → 248px) */
+  .step02__inner { grid-template-columns: 1fr 380px; }
+  .carousel { width: 380px; --slide-w: 248px; --slide-gap: 58px; --slide-pad: 29px; }
+  .carousel__arrow { top: 226px; }
   .step--02 .step__copy { margin-top: 160px; }
 
   /* 03 */
