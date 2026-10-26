@@ -102,7 +102,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .lang__menu {
   position: absolute;
   top: calc(100% + 8px);
-  left: 0;
+  right: 0;           /* 오른쪽 끝 기준으로 펼쳐져 화면 밖으로 잘리지 않게 */
   min-width: 78px;
   padding: 8px;
   background: var(--white);
@@ -180,8 +180,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .hero__copy {
   position: relative;
-  /* 시안 기준 첫 줄 baseline ≈ 화면 중앙 */
-  transform: translateY(110px);
+  /* 시안 기준 첫 줄 baseline ≈ 화면 중앙 + 100px */
+  transform: translateY(210px);
   text-align: center;
 }
 
@@ -516,6 +516,12 @@ ul { list-style: none; margin: 0; padding: 0; }
   align-items: center;
 }
 
+/* 사파리에서 옆 슬라이드가 움직일 때 텍스트가 깜빡이지 않도록 별도 레이어로 */
+.step--02 .step__copy {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 /* 캐러셀 */
 .carousel {
   position: relative;
@@ -539,6 +545,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .carousel__track {
   display: flex;
+  will-change: transform;
   gap: var(--slide-gap);
   transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -574,6 +581,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   justify-content: center;
   align-items: center;
   gap: 14px;
+  height: 20px;       /* 활성 점 크기 변화로 높이가 바뀌어 텍스트가 흔들리지 않게 고정 */
   margin-top: 21px;
 }
 
@@ -849,7 +857,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 1600px) {
   .header__inner { padding: 0 6vw; }
   .hero__line { font-size: 4.25vw; line-height: 1.2; }
-  .hero__copy { transform: translateY(6vw); }
+  .hero__copy { transform: translateY(calc(6vw + 100px)); }
   .background__inner { padding-left: 6vw; padding-right: 6vw; max-width: calc(1000px + 12vw); }
 }
 
@@ -913,7 +921,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .header__nav > a { display: none; }
   .hero__line { font-size: 6.4vw; white-space: normal; }
   .sp-br { display: block; }
-  .hero__copy { transform: none; padding: 0 16px; }
+  .hero__copy { transform: translateY(100px); padding: 0 16px; }
   .to-top { right: 20px; bottom: 20px; width: 44px; height: 44px; }
   .background { --line-count: 12; --line-gap: 7px; height: auto; min-height: 100vh; }
   .background__inner { padding: calc(var(--header-h) + 48px) 20px calc(12 * 7px + 48px); height: auto; min-height: 100vh; }
