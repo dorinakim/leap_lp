@@ -4,7 +4,7 @@
 
 // ---------- 후속연구 구글 폼 ----------
 // URL이 발행되면 여기에 넣으면 모바일 'Join Me!' 버튼에 연결됨
-const GOOGLE_FORM_URL = "";
+const GOOGLE_FORM_URL = "https://forms.gle/6VicimExFW3vnPV39";
 
 // iOS Safari에서 터치 시 :active(누름 효과)가 동작하도록
 document.addEventListener("touchstart", () => {}, { passive: true });
