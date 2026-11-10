@@ -3,7 +3,7 @@
 // =========================================================
 
 // ---------- 후속연구 구글 폼 ----------
-// URL이 발행되면 여기에 넣으면 모바일 'Join Me!' 버튼에 연결됨
+// URL이 발행되면 여기에 넣으면 모바일 'Try LEAP' 버튼에 연결됨
 const GOOGLE_FORM_URL = "https://dorinakim.github.io/leap/onboarding.html";
 
 // iOS Safari에서 터치 시 :active(누름 효과)가 동작하도록
@@ -44,8 +44,8 @@ const I18N = {
     "step3.title": "소셜 상호작용 및 검색 단계",
     "step3.text":
       "사용자는 개별 피드에 댓글을 작성하여 단어의 실제 쓰임새나 국가별 문화적 차이에 대해 <strong>글로벌 유저들과 쌍방향으로 소통</strong>할 수 있습니다. 또한, 검색 기능을 통해 특정 키워드로 포스팅된 다채로운 일상 이미지 피드들을 한눈에 확인하며 <strong>다양한 언어적 맥락을 파악</strong>할 수 있습니다.",
-    "future.title": "<span>연구</span>는 계속됩니다!",
-    "future.text": "저의 후속연구에 <strong>함께해 주세요</strong>:)",
+    "future.title": "<span>체험</span>해 보세요!",
+    "future.text": "<strong>LEAP</strong>을 사용해 볼 준비가 되셨나요?",
     "step4.title": "행동 유도 푸시 알림 단계",
     "step4.text":
       "LEAP은 서비스 사용 중간에 두 가지 유형의 <strong>자발적 행동 유도 알림</strong>을 송신합니다. 첫 번째는 \"지금 주변은 어떤 모습인가요?\", \"오늘 하루의 단어를 채워보세요!\"와 같이 사용자의 일상 아카이빙 및 콘텐츠 생산을 독려하는 알림이며, 두 번째는 \"다른 사람의 피드에 댓글을 달아주세요\"와 같이 타 유저와의 소셜 인터랙션을 밀착 유도하는 알림입니다.",
@@ -77,8 +77,8 @@ const I18N = {
     "step3.title": "Social Interaction & Search",
     "step3.text":
       "By commenting on individual posts, users can <strong>talk with global users in both directions</strong> about how a word is actually used and how cultures differ. Through search, they can also browse diverse everyday image posts tagged with a keyword at a glance and <strong>grasp a variety of linguistic contexts</strong>.",
-    "future.title": "<span>The research</span> goes on!",
-    "future.text": "Please <strong>join my follow-up research</strong> :)",
+    "future.title": "<span>Try</span> it yourself!",
+    "future.text": "Are you ready to try <strong>LEAP</strong>?",
     "step4.title": "Action-Prompting Push Notifications",
     "step4.text":
       "While the service is in use, LEAP sends two types of <strong>notifications that prompt voluntary action</strong>. The first, such as \"What does it look like around you right now?\" or \"Fill in today's word!\", encourages users to archive their daily lives and create content; the second, such as \"Leave a comment on someone else's feed,\" closely encourages social interaction with other users.",
